@@ -1,0 +1,43 @@
+<?php
+if($_POST["submit"]) {
+    $recipient="smerolla@bu.edu";
+    $subject="Form to email message";
+    $sender=$_POST["name"];
+    $senderEmail=$_POST["email"];
+    $message=$_POST["message"];
+    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+    mail($recipient, $subject, $mailBody);
+}?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shaundra Merolla, Contact Me</title>
+        <link href="css/WebStyle.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>Shaundra Merolla</header>
+        <h2>Contact Me</h2>
+        <div id="contactForm">
+        <form name="contactMe"
+        action="Contact.php"
+        method="POST">
+        <p>
+            <label for="name">Your Name:</label>
+        </p> <input type="text" id="name" name="name" required>
+        <p>
+            <label for="email">Your Email:</label>
+        </p> <input type="text" id="email" name="email" required>
+        <p>
+            <label for="subject">Subject:</label>
+        </p> <input type="text" id="subject" name="subject" required>
+        <p>
+            <label for "message">Message:</label>
+        </p> <textarea name="message">Your Message Here</textarea>
+        <p>
+            <button type="submit" id="submit">Submit</button>
+        </p>
+        
+        </form>
+        </div>
+    </body>
+</html>

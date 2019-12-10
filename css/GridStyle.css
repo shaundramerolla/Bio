@@ -1,0 +1,21 @@
+.column {
+    width: 30%;
+    float: left;
+    margin: 1%;
+}
+img {
+    width: 300px;
+    height: 500px;
+    float: left;
+}
+.column2 {
+    width: 45%;
+    float: left;
+    margin: 1%;
+}
+img.imgColumn {
+    float: right;
+    width: 400px;
+    height: 530px;
+
+}
